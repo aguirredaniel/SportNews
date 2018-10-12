@@ -1,0 +1,25 @@
+﻿@using Core.UseCase
+@model IEnumerable<Core.UseCase.NewsViewModel>
+
+<main class="pl-md-5, px-md-5">
+<div class="row">
+@foreach (var news in Model)
+{
+    <div class="col-4">
+        <div class="card ">
+            <img class="card-img-top" src="@news.urlImage" width="100%" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">@news.title</h5>
+                <h6 class="card-subtitle mb-2 text-muted small">
+                    @news.author
+                    <span class="float-right">@news.publishedAt</span>
+                </h6>
+                <p class="card-text">@news.description</p>
+                <a href="#" class="btn btn-primary">Continue reading</a>
+            </div>
+        </div>
+        </div>
+        }
+    </div>
+    </
+    main >
